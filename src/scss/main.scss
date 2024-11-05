@@ -120,10 +120,6 @@ video {
   animation-name: background-position;
 }
 
-@keyframes background-position {
-  background-position: 50%;
-}
-
 .submit {
   margin: 50px 0;
   display: flex;
@@ -137,6 +133,20 @@ video {
 
 .submit-plane {
   width: 26px;
+  animation-name: translate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes translate {
+  0% {
+    transform: translate(0, 0);
+    opacity: 100%;
+  }
+  100% {
+    transform: translate(50px, -50px);
+    opacity: 0%;
+  }
 }
 
 .pong {
